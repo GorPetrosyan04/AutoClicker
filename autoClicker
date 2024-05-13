@@ -1,0 +1,19 @@
+import pyautogui
+import time
+
+def auto_click(interval):
+    """
+    Function to perform auto-clicking indefinitely with a specified interval.
+    """
+    while True:
+        pyautogui.click()
+        time.sleep(interval)
+
+if __name__ == "__main__":
+    interval = 0.0000000001  # Interval between clicks (in seconds)
+
+    print("Auto-clicker started. Press Ctrl+C to stop.")
+    try:
+        auto_click(interval)
+    except KeyboardInterrupt:
+        print("\nAuto-clicker stopped.")
